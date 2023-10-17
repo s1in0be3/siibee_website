@@ -1,240 +1,57 @@
-<!--CP_PRG_EN-->
-<!--Represents a "comment". A Comment prevents PyCharm from executing this code.-->
-<!DOCTYPE html> <!--Represents the document type.-->
+<!DOCTYPE html>
+<!--
+    
+    Represents the document type.
 
-<html lang="en-NO"> <!--Represents the language the html is written in.-->
+-->
 
-<head> <!--Contains metadata/information for the document.-->
-<meta charset="UTF-8" content="width=device-width, initial-scale=1"> <!--Defines metadata about an HTML document.
-In this case HTML encoding, so that the web browser knows which character set to use.
-The content="width=device-width tells the browser that opens the web page, that the full width must be used.
-Now it doesn't matter the width of the device that opens the webpage.
-This html code will now follow the width of the device, even if it is on a cellphone or a computer screen.-->
+<html lang="en-NO">
+<!--
+    
+    Represents the language the html is written in.
 
-<title>www.Kristaberslo.no</title> <!--The title for the document, and the name of the company-->
+-->
 
-<!--<style> Defines style information for a document. This is where te webpages design is written.-->
-<!--"body {}" specifies how the all around design should be. In this case it decides that the background color is light grey.
-Margin clears an area outside the websites border. In this case the website developer does not want any outside border,
-and set this to 0. If the margin is commented out, the webdesign will have an default border.
-The Padding clears an area around the content. This is also set to 0 by the developer.
-font-family's job is to set the font for the webpage. In this case the font "Tahoma" is chosen.
-If the web browser that opens the webpage does not find the "Tahoma" font, it is set to look for the font "Verdana".
-line-height determines the space between each line.-->
+    <head>
+        <meta charset="UTF-8" content="width=device-width" initial-scale=1">
+        <!--
 
-<!--"fieldset {}" Makes an border around the code inside <fieldset></fieldset> (shown further down in the code).
-It is again decided where this border should be placed on the web side, with the help of margin and padding.-->
+            This code defines the metadata in a HTML code. The point is to tell the browser what to do. 'Charset UTF-8' is the charater set.
+            The code 'width=device-width' tells the browser to open the web page with full width.
+        
+        -->
 
-<!--"legend {}" adds an extra textbox thru the border made by <fieldset>. This is a good way to make an headline
-for the text inside the border.-->
+            <title>www.siibee.no</title>
+            <!--
+                
+                The name of the webpage. Is shown in the 'tab' area.
+            
+            -->
+            
+        <style>
 
-<!--"a:link {}" is the design of the webpages' links. In this case the links is used as buttons within the page.
-The buttons get a background-color, a border around each button and a color for the text that is written on the button.
-The "text-align" decides that the text in the button is placed in the center of the button. The "text-decoration"
-decides that the text on the buttons should be clear, without any distraction, like e.g. a line through the text.
-"display: block;" is used to control the layout, so that the design stays the way, that the developer intended.-->
+        </style>
+    </head>
 
-<!--a:hover {} is -->
+<!--
 
-<style>
-body {
-background-color: #d9d9d9;
-margin: 0em;
-padding: 0em;
-font-family: Tahoma, Verdana;
-line-height: 1.5em;
-}
+    Remember: to add a link, use '<a href="https://www.w3schools.com">name-of-webpage</a>' (without the '' tags).
 
-legend {
-background-color: #9b9fb0;
-color: Black;
-padding: 5px 10px -2px;
-border: 1px solid #808080;
-margin-left: 10px;
-margin-top: 20px;
-}
+    Remember: to add a picture, use '<img src="img_example.jpg" width="500" height="600" alt="a picture used as an code-traning example">' (without the '' tags).
+        The 'width="500" height="600"' specify the width and height of the image (in pixels).
+        The 'alt="a picture used as an code-traning example"' specifies an alternate text for an image.
 
-fieldset {
-margin-left: 10px;
-margin-top: 10px;
-margin-right: 803px;
-padding-top: 0.35em;
-padding-bottom: 0.625em;
-}
+    If you want to link to a picture that is already within the domain (called a Relative URL), the code changes to this,
+    '<img src="/pictures/img_example.jpg">' (without the '' tags). It is almost always best to use relative URLs as they will not break if you change domain.
+        
+-->
 
-.button1, a:link, a:visited, a:active {
-background-color: #9b9fb0;
-border: 1px solid #808080;
-color: #000000;
-text-align: center;
-text-decoration: none;
-display: block;
-margin-right: 0px;
-padding: 5px 5px 5px
-transition-duration: 0.4s;
+    <body>
 
-}
+        <h1>Welcome to SiiBee</h1>
+        <p>On this webpage I am going to collect my projects as I am practicing to become a coder!<br>
+            Please be patient with me, as I am a complete and absolute beginner.<br></p>
+        
+    </body>
 
-a:hover {
-background-color: #8c8c8c;
-color: black;
-}
-
-.button2 {
-background-color: #9b9fb0;
-border: 1px solid #808080;
-color: #000000;
-text-align: center;
-text-decoration: none;
-display: block;
-margin-right: 0px;
-padding: 5px 5px 5px
-transition-duration: 0.4s;
-}
-
-.button3 {
-background-color: #9b9fb0;
-border: 1px solid #808080;
-color: #000000;
-text-align: center;
-text-decoration: none;
-display: block;
-margin-right: 0px;
-padding: 5px 5px 5px
-transition-duration: 0.4s;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #d9d9d9;
-  }
-
-h1 {
-color: #000000;
-font-family: Times New Roman;
-text-align: left;
-display: block;
-font-size: 1em;
-font-weight: normal;
-letter-spacing: 3px;
-word-spacing: 3px;
-border: 1px solid #808080;
-margin-top: 1px;
-margin-bottom: 1px;
-margin-right: 600px;
-margin-left: 10px;
-float: center;
-}
-
-h2, h3 {
-color: #000000;
-font-family: Times New Roman;
-display: block;
-font-size: 1em;
-font-weight: normal;
-letter-spacing: 3px;
-word-spacing: 3px;
-}
-
-.socialmediapicture0 {
-color: #000000;
-text-align: right;
-text-decoration: none;
-display: block;
-float: right;
-margin-top: -58px;
-margin-right: 10px;
-display: block;
-}
-
-.socialmediapicture1 {
-color: #000000;
-text-align: right;
-text-decoration: none;
-display: block;
-float: right;
-margin-top: -20px;
-margin-right: 10px;
-display: block;
-}
-
-.socialmediatext0 {
-margin-top: -70px;
-margin-right: 5px;
-float: right;
-}
-
-.socialmediatext1 {
-margin-top: -30px;
-margin-right: 5px;
-float: right;
-}
-
-img {
-float: right;
-}
-
-h4 {
-display: inline-block;
-}
-
-</style>
-</head>
-
-<div class="header">
-<img src="header.jpg" alt="car" height="450" width="1262" style="float:center;">
-</div>
-
-<body>
-
-<fieldset>
-<legend><b>MENY:</b></legend>
-
-<div class="button1">
-<a href="ourproducts.html" style="text-decoration:none;">Our Products</a>
-</div>
-
-<div class="button2">
-<a href="shoppingcart.html" style="text-decoration:none;">Shopping Cart</a>
-</div>
-
-<div class="button3">
-<a href="aboutus.html" style="text-decoration:none;">About Us</a>
-</div>
-</fieldset>
-
-<img src="img.jpg" alt="sale" height="380" width="500" border="1px" style="float:right;margin:-130px 10px">
-<br>
-<h1>&nbsp;Welcome to Kristaberslo Warehouse!<br>
-    &nbsp;Our main focus is all about selling vehicles,<br>
-    &nbsp;but we do sell other products too.<br><br>
-    &nbsp;Welcome to Kristaberslo Warehouse!<br>
-    &nbsp;Our main focus is all about selling vehicles,<br>
-    &nbsp;but we do sell other products too.<br><br>
-    &nbsp;Welcome to Kristaberslo Warehouse!<br>
-    &nbsp;Our main focus is all about selling vehicles,<br>
-    &nbsp;but we do sell other products too.
-
-</h1>
-<br>
-
-<div class="socialmediapicture0"><a href="https://www.facebook.com">
-  <img src="fb.jpg" alt="Add us on Facebook" height="30" width="30">
-</a></div>
-
-<div class="socialmediapicture1">
-<a href="https://www.twitter.com">
-  <img src="twi.jpg" alt="Add us on Facebook" height="30" width="30">
-</a>
-</div>
-
-<div class="socialmediatext0">
-<h2 id="fb">Add us on Facebook</h2></div>
-<div class="socialmediatext1">
-<h3 id="tw">Add us on Twitter</h3></div>
-
-</body>
 </html>
