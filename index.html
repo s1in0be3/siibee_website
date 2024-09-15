@@ -1,13 +1,11 @@
-<!DOCTYPE html> <!-- Defines the document type and version of HTML being used. -->
-
-<html lang="en-NO"> <!-- Specifies the language of the document. -->
-
+<!DOCTYPE html>
+<html lang="en-NO">
+<!-- INDEX PAGE -->
 <head>
-    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Controls the layout on mobile browsers. -->
-    <title>www.siibee.no</title> <!-- Sets the title of the webpage. -->
-    <link rel="icon" type="image/x-icon" href="/pictures/sb.png"> <!-- Specifies the favicon for the webpage. -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.siibee.no</title>
+    <link rel="icon" type="image/x-icon" href="/pictures/sb.png">
     <style>
         /* Universal styles */
         body {
@@ -29,8 +27,8 @@
             border-bottom: 2px solid #ffffff;
         }
 
-        /* Search dropdown */
-        .dropbtn {
+        /* Search button */
+        .search-btn {
             background-color: #ffffff;
             color: black;
             padding: 10px 16px;
@@ -39,12 +37,13 @@
             cursor: pointer;
         }
 
-        .dropbtn:hover,
-        .dropbtn:focus {
+        .search-btn:hover,
+        .search-btn:focus {
             background-color: #ddd;
         }
 
-        #myInput {
+        /* Search input */
+        .search-input {
             box-sizing: border-box;
             background-image: url('searchicon.png');
             background-position: 14px 12px;
@@ -56,16 +55,18 @@
             width: 100%;
         }
 
-        #myInput:focus {
+        .search-input:focus {
             outline: 3px solid #ddd;
         }
 
-        .dropdown {
+        /* Dropdown container for search */
+        .search-dropdown {
             position: relative;
             display: inline-block;
         }
 
-        .dropdown-content {
+        /* Dropdown content for search */
+        .search-dropdown-content {
             display: none;
             position: relative;
             background-color: #f6f6f6;
@@ -77,23 +78,23 @@
             right: 0px;
         }
 
-        .dropdown-content a {
+        .search-dropdown-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
 
-        .dropdown a:hover {
+        .search-dropdown-content a:hover {
             background-color: #ddd;
         }
 
-        .show {
+        .show-dropdown {
             display: block;
         }
 
         /* Style the side navigation bar */
-        .sidenav {
+        .sidebar {
             height: 100%;
             width: 250px;
             position: fixed;
@@ -105,8 +106,8 @@
             border-right: 2px solid #ffffff;
         }
 
-        /* Style the sidenav links */
-        .sidenav a {
+        /* Style the sidebar links */
+        .sidebar a {
             padding: 8px 16px;
             text-decoration: none;
             font-size: 20px;
@@ -115,8 +116,8 @@
             text-align: left;
         }
 
-        /* Dropdown container */
-        .dropdown-btn {
+        /* Dropdown button in the sidebar */
+        .sidebar-dropdown-btn {
             font-size: 20px;
             padding: 8px 16px;
             border: none;
@@ -128,37 +129,40 @@
             outline: none;
         }
 
-        .dropdown-btn:hover {
+        .sidebar-dropdown-btn:hover {
             background-color: #ddd;
             color: black;
         }
 
-        .dropdown-container {
+        /* Dropdown container in the sidebar */
+        .sidebar-dropdown-container {
             display: none;
             background-color: #f9f9f9;
             padding-left: 15px;
         }
 
         /* Change color on hover */
-        .sidenav a:hover {
+        .sidebar a:hover {
             background-color: #ddd;
             color: black;
-        }/* Style the main content area */
-        .main {
+        }
+
+        /* Style the main content area */
+        .main-content {
             margin-left: 250px;
             padding: 20px;
             display: flex;
         }
 
         /* Create two equal columns that flex */
-        .column {
+        .flex-column {
             width: 50%;
             padding: 15px;
-            float: left; /* Float columns to the left */
+            float: left;
         }
 
         /* Clear floats after the columns */
-        .row::after {
+        .flex-row::after {
             content: "";
             display: table;
             clear: both;
@@ -166,18 +170,11 @@
 
         /* Responsive layout */
         @media screen and (max-width: 600px) {
-            .column {
+            .flex-column {
                 width: 100%;
             }
         }
     </style>
-    <!-- body {background-color: #ffefec;} - Sets the background color of the entire webpage to a light pinkish color (#ffefec).-->
-        <!--* { box-sizing: border-box; } - is a universal selector that applies the box-sizing property to all elements on the page. Ensures that padding and border are included in the total width and height of elements. This means the width and height you set for an element will include its padding and border, which can help with layout consistency and prevent unexpected size changes.-->
-        <!-- body { margin: 0; } - Removes the default margin around the <body> element. Browsers typically apply a small margin around the body by default, which can affect the layout of your content.-->
-        <!--.header { background-color: #f1f1f1; } - Sets the header’s background color to light gray.-->
-        <!--.header { padding: 20px; } - Adds 20 pixels of space inside the header, creating room around the content.-->
-        <!--.header { text-align: center; } - Centers the text within the header.-->
-        <!-- --> 
 </head>
 
 <body>
@@ -188,22 +185,22 @@
     </div>
 
     <!-- Side Navigation Bar -->
-    <div class="sidenav">
+    <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="#">About</a>
         <a href="tutorials/tutorialslanding.html">Tutorials</a>
 
-        <button class="dropdown-btn">example text &#9660;</button>
-        <div class="dropdown-container">
+        <button class="sidebar-dropdown-btn">example text &#9660;</button>
+        <div class="sidebar-dropdown-container">
             <a href="#">page a</a>
             <a href="#">page b</a>
             <a href="#">page c</a>
         </div>
 
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Search</button>
-            <div id="myDropdown" class="dropdown-content">
-                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+        <div class="search-dropdown">
+            <button onclick="toggleSearchDropdown()" class="search-btn">Search</button>
+            <div id="searchDropdown" class="search-dropdown-content">
+                <input type="text" placeholder="Search.." class="search-input" onkeyup="filterSearch()">
                 <a href="#about">Home</a>
                 <a href="#services">About</a>
                 <a href="#services">Tutorials</a>
@@ -212,58 +209,58 @@
         </div>
     </div>
 
-<!-- Main Content Area -->
-    <div class="main">
-        <div class="row">
-            <div class="column">
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="flex-row">
+            <div class="flex-column">
                 <h2>HEI</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
             </div>
-            <div class="column">
+            <div class="flex-column">
                 <h2>PÅ DEG</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
             </div>
         </div>
     </div>
 
-   <!-- Scripts -->
-        <script>
-            /* Toggle between showing and hiding the dropdown */
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
+    <!-- Scripts -->
+    <script>
+        /* Toggle between showing and hiding the search dropdown */
+        function toggleSearchDropdown() {
+            document.getElementById("searchDropdown").classList.toggle("show-dropdown");
+        }
 
-            /* Filter search */
-            function filterFunction() {
-                var input, filter, ul, li, a, i;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
-                div = document.getElementById("myDropdown");
-                a = div.getElementsByTagName("a");
-                for (i = 0; i < a.length; i++) {
-                    txtValue = a[i].textContent || a[i].innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        a[i].style.display = "";
-                    } else {
-                        a[i].style.display = "none";
-                    }
+        /* Filter search */
+        function filterSearch() {
+            var input, filter, div, a, i;
+            input = document.querySelector(".search-input");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("searchDropdown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
                 }
             }
+        }
 
-            /* Dropdown functionality */
-            var dropdown = document.getElementsByClassName("dropdown-btn");
-            var i;
-
-            for (i = 0; i < dropdown.length; i++) {
-                dropdown[i].addEventListener("click", function () {
-                    this.classList.toggle("active");
-                    var dropdownContent = this.nextElementSibling;
-                    if (dropdownContent.style.display === "block") {
-                        dropdownContent.style.display = "none";
-                    } else {
-                        dropdownContent.style.display = "block";
-                    }
-                });
-            }
-        </script>
+        /* Dropdown functionality for sidebar */
+        var dropdowns = document.getElementsByClassName("sidebar-dropdown-btn");
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
+
+</html>
