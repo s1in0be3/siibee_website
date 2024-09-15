@@ -10,25 +10,120 @@
             <link rel="icon" type="image/x-icon" href="/pictures/sb.png"> <!-- Specifies the favicon for the webpage. The favicon is a small icon that appears in the browser tab. href="/pictures/sb.png" provides the path to the favicon image. type="image/x-icon" specifies the file type. -->
         
         <style>
-            body {background-color: #ffefec;}
-        </style> <!-- Sets the background color of the entire webpage to a light pinkish color (#ffefec).-->
-        
+            /* Universal styles */
+            body {
+                background-color: #ffefec;
+                margin: 0;
+                font-family: Garamond, Georgia, Times New Roman;
+             }
+            * {box-sizing: border-box;
+            }
+
+            /* Style the header */
+            .header {
+                background-color: #ffefec;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 2px solid #ccc; /* Adds a 2-pixel solid divider under the header */
+            }
+
+            /* Style the side navigation bar */
+            .sidenav {
+                height: 100%; /* Full-height: the sidebar will take up the full height of the page */
+                width: 250px; /* Width of the sidebar */
+                position: fixed; /* Fixed position to keep it in place */
+                top: 156px; /*  Aligns the sidebar just below the header */
+                left: 0; /* Aligns the sidebar to the left of the page */
+                background-color: #ffffff; /* Background color of the sidebar */
+                overflow-x: hidden; /* Disable horizontal scrolling */
+                padding-top: 20px; /* Adds padding at the top */
+                border-right: 2px solid #ccc; /* Adds a 2-pixel solid divider to the right of the navbar */
+            }
+
+            /* Style the sidenav links */
+            .sidenav a {
+                padding: 8px 16px; /* Adds padding inside each link */
+                text-decoration: none; /* Removes underline from the links */
+                font-size: 20px; /* Sets the font size of the links */
+                color: #000000; /* Sets the text color to black */
+                display: block; /* Makes each link a block-level element */
+                text-align: left; /* Aligns the text to the left */
+            }
+
+            /* Change color on hover */
+            .sidenav a:hover {
+                 background-color: #ddd; /* Changes the background color when hovered */
+                 color: black; /* Changes the text color when hovered */
+            }
+
+            /* Style the main content area */
+            .main {
+                margin-left: 250px; /* Space for the sidebar */
+                padding: 20px; /* Padding inside the main content */
+                overflow: hidden; /* Ensures content does not overflow the main area */
+            }
+
+            /* Create two equal columns that flex */
+            .column {
+                width: 50%; /* Adjusted to 50% for two columns */
+                padding: 15px; /* Padding inside each column */
+                float: left; /* Float columns to the left */
+            }
+
+            /* Clear floats after the columns */
+            .row::after {
+               content: "";
+               display: table;
+               clear: both;
+            }
+
+            /* Responsive layout - makes the columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+            .column {
+                width: 100%; /* Stacks the columns on top of each other on smaller screens */
+                }
+            }
+
+        </style>
+        <!-- body {background-color: #ffefec;} - Sets the background color of the entire webpage to a light pinkish color (#ffefec).-->
+        <!--* { box-sizing: border-box; } - is a universal selector that applies the box-sizing property to all elements on the page. Ensures that padding and border are included in the total width and height of elements. This means the width and height you set for an element will include its padding and border, which can help with layout consistency and prevent unexpected size changes.-->
+        <!-- body { margin: 0; } - Removes the default margin around the <body> element. Browsers typically apply a small margin around the body by default, which can affect the layout of your content.-->
+        <!--.header { background-color: #f1f1f1; } - Sets the header’s background color to light gray.-->
+        <!--.header { padding: 20px; } - Adds 20 pixels of space inside the header, creating room around the content.-->
+        <!--.header { text-align: center; } - Centers the text within the header.-->
+        <!-- --> 
     </head>
 
-<!--Remember: to add a link, use '<a href="https://www.w3schools.com">name-of-webpage</a>' (without the '' tags).
-
-    Remember: to add a picture, use '<img src="img_example.jpg" width="500" height="600" alt="a picture used as an code-traning example">' (without the '' tags).
-        The 'width="500" height="600"' specify the width and height of the image (in pixels).
-        The 'alt="a picture used as an code-traning example"' specifies an alternate text for an image..
-
-    If you want to link to a picture that is already within the domain (called a Relative URL), the code changes to this,
-    '<img src="/pictures/img_example.jpg">' (without the '' tags). It is almost always best to use relative URLs as they will not break if you change domain.-->
 
     <body>
-        <!--Contains the content of the HTML document that is visible to users. Everything between the <body> and </body> tags will be rendered on the webpage.-->
-        <h1 style="text-align:center;">Welcome to SiiBee</h1>
-        <p style="text-align:center;"><br>Please be patient with me, as I am a complete and absolute beginner.<br></p>
-        
+    <!--Contains the content of the HTML document that is visible to users. Everything between the <body> and </body> tags will be rendered on the webpage.-->
+    <!-- Header -->
+        <div class="header"> <!-- Defines the header section of the page -->
+            <h1 style="text-align:center;">Welcome to SiiBee</h1>
+            <p style="text-align:center;">Please be patient with me, as I am a complete and absolute beginner.</p> <!-- Contains an <h1> for the main title and a <p> for a description or additional text. -->
+        </div>
+
+    <!-- Side Navigation Bar -->
+        <div class="sidenav"> <!-- Represents the side navigation bar. -->
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a> <!-- Contains multiple <a> elements for links in the sidebar. Each link is styled to be a block-level element and is displayed with padding and color. -->
+        </div>
+
+    <!-- Main Content Area -->
+        <div class="main"> <!-- The main content area of the page, which includes the two columns. It uses a margin-left value to accommodate the sidebar's width, ensuring the main content doesn’t overlap with the sidebar. -->
+            <div class="row"> <!-- A container for the columns. This ensures that columns are grouped together and helps with clearing floats (if floats are used). -->
+                <div class="column"> <!-- Represents each individual column within the .row. Each column is styled to take up 50% of the available width, allowing two columns to sit side by side. -->
+                    <h2>HEI</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                </div>
+                <div class="column">
+                    <h2>PÅ DEG</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+                </div>
+            </div>
+         </div>
+
     </body>
 
 </html>
