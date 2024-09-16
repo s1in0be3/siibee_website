@@ -181,17 +181,18 @@
 <script  type="text/javascript"  src="/pBD16ac_PCEdCRZmjLI-lhl4PPKiOunzq4r3s0ta8XXy2_uwc0lcta-HhYTPoffYH6dxIt7tEjnwLinSXs4pxQ=="></script><script  type="text/javascript"  src="/QuKC_1ZlXvftZR_19gu5EnthBKSUx2l5Hr-1TamCjFen7lQ9ROg-uesX4S1Pn-z71czFc1n10lRvQJ-flG2YxQ=="></script></head>
 
 <body>
-<div id="header-placeholder"></div>
+<!-- Header -->
+<div id="header01"></div>
 
-    <script>
-        // JavaScript to load header.html into the header-placeholder div
-        fetch('header01.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-    </script>
+<script>
+    // Load header.html content into the header-placeholder div
+    fetch('header01.html') // Ensure this matches the actual file name
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header01').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading header:', error));
+</script>
 
     <!-- Side Navigation Bar -->
     <div class="sidenav">
