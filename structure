@@ -1,0 +1,13 @@
+Planned structure:
+
+/my repo
+  /html
+    /tutorials
+  /css
+    /something
+  /javascript
+    /something
+  /images
+    /something
+  index.html
+  READ.ME
