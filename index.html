@@ -179,11 +179,18 @@
 <script  type="text/javascript"  src="/FRplVIOHdlPymUZStqXXFlQnv9D7tfFMax7yP0KarAlUlNlXGvVz4asJxDI8xqu0qWh2tfbVX-z1v29O8216NA=="></script><script  type="text/javascript"  src="/wYXdrnvSemYVn75gFnbZ7Uj-l89lQhy9U4bGiKhSjCx5NuGqUAsujXAdWIAOCvVqkrazQfs_28bXzS3AjBnmSg=="></script></head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <h1>Welcome to SiiBee</h1>
-        <p>Please be patient with me, as I am a complete and absolute beginner.</p>
-    </div>
+    <div id="header-placeholder"></div>
+
+    <script>
+        // JavaScript to load header.html into the header-placeholder div
+        fetch('header01.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
 
     <!-- Side Navigation Bar -->
     <div class="sidebar">
