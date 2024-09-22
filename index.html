@@ -179,36 +179,17 @@
 <script  type="text/javascript"  src="/FRplVIOHdlPymUZStqXXFlQnv9D7tfFMax7yP0KarAlUlNlXGvVz4asJxDI8xqu0qWh2tfbVX-z1v29O8216NA=="></script><script  type="text/javascript"  src="/wYXdrnvSemYVn75gFnbZ7Uj-l89lQhy9U4bGiKhSjCx5NuGqUAsujXAdWIAOCvVqkrazQfs_28bXzS3AjBnmSg=="></script></head>
 
 <body>
-<!-- Header -->
-<div id="header01"></div>
-
-<script>
-    // Load header.html content into the header-placeholder div
-    fetch('header01.html') // Ensure this matches the actual file name
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header01').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading header:', error));
-</script>
-
+    <!-- Header -->
+    <div class="header">
+        <h1>Welcome to SiiBee</h1>
+        <p>Please be patient with me, as I am a complete and absolute beginner.</p>
+    </div>
 
     <!-- Side Navigation Bar -->
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="#">About</a>
         <a href="tutorials/tutorialslanding.html">Tutorials</a>
-
-        <div class="search-dropdown">
-            <button onclick="toggleSearchDropdown()" class="search-btn">Search</button>
-            <div id="searchDropdown" class="search-dropdown-content">
-                <input type="text" placeholder="Search.." class="search-input" onkeyup="filterSearch()">
-                <a href="#about">Home</a>
-                <a href="#services">About</a>
-                <a href="tutorials/tutorialslanding.html">Tutorials</a>
-                <a href="#services">example text</a>
-            </div>
-        </div>
     </div>
 
     <!-- Main Content Area -->
@@ -218,51 +199,11 @@
                 <h2>HEI</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
             </div>
-            <div class="flex-column">
-                <h2>PÅ DEG</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-            </div>
         </div>
     </div>
 
     <!-- Scripts -->
-    <script>
-        /* Toggle between showing and hiding the search dropdown */
-        function toggleSearchDropdown() {
-            document.getElementById("searchDropdown").classList.toggle("show-dropdown");
-        }
 
-        /* Filter search */
-        function filterSearch() {
-            var input, filter, div, a, i;
-            input = document.querySelector(".search-input");
-            filter = input.value.toUpperCase();
-            div = document.getElementById("searchDropdown");
-            a = div.getElementsByTagName("a");
-            for (i = 0; i < a.length; i++) {
-                txtValue = a[i].textContent || a[i].innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    a[i].style.display = "";
-                } else {
-                    a[i].style.display = "none";
-                }
-            }
-        }
-
-        /* Dropdown functionality for sidebar */
-        var dropdowns = document.getElementsByClassName("sidebar-dropdown-btn");
-        for (var i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>
